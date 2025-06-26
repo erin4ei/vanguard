@@ -1,7 +1,402 @@
 /* CSS BY YOUR NAME */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+body p, h2, h3 {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* HEADER */
+header {
+    background-color: var(--black);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+
+.logo-container h1::before {
+    content: "";
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* HEADER */
+
+header h1 {
+    color: var(--blue);
+    font-family: var(--font);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a:hover {
+    background-color: var(--blue);
+    color: var(--black);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* HIDE CHECKBOX */
+
+.hamburger,
+.nav-toggle {
+    display: none;
+}
+
+/* INNOVATION SECTION */
+
+#innovation {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+#innovation h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+#innovation p {
+    color: var(--white);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+#innovation button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+#innovation button:hover {
+    background-color: var(--red);
+    transform: scale(1.05);
+    
+}
+
+/* EXPERTISE SECTION */
+
+#expertise h2 {
+    color: var(--black);
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+#expertise p {
+    color: var(--black);
+    font-size: 1rem;
+    margin: auto;
+    padding: 1rem;
+    text-align: left;
+    line-height: 1.2rem;
+}
+
+/* SERVICES SECTION */
+
+#services {
+    padding: 2rem 0;
+}
+
+#services h2 {
+    color: var(--black);
+    font-size: 2.5rem;
+    padding: 1.6rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+#services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 0 1.5rem;
+    margin: 2rem 0;
+}
+
+#services article {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 3rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+#services article:hover {
+    transform: translateY(-5px);
+}
+
+#services h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#services p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* RESULTS SECTION */
+
+#results {
+    background-color: var(--blue);
+    padding: 2rem;
+}
+
+#results h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    padding: 1.6rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+#results p {
+    color: var(--white);
+    font-size: 1rem;
+    padding: 2rem;
+    text-align: left;
+    line-height: 1.2rem;
+}
+
+#results .results {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+#results .profits {
+    grid-column: 1;
+}
+
+#results .growth {
+    grid-column: 2;
+}
+
+#results #bar-chart {
+    display: flex;
+    align-items: flex-end;
+    width: 100%
+}
+
+#results .bar {
+    position: relative;
+}
+
+#results h3 {
+    color: var(--white);
+    font-size: 1.6rem;
+    padding: 1.6rem 0;
+    text-align: left;
+    font-weight: 700;
+}
+
+#results table {
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+    border-spacing: 1rem;
+    margin: 2rem 0;
+}
+
+#results th {
+    border: solid 0.1px var(--charcoal);
+    padding: 1rem;
+}
+
+#results td {
+    padding: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    border: solid 0.1px var(--charcoal);
+    text-align: center;
+}
+
+/* CONTACT SECTION */
+
+#contact {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#contact h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    padding: 1.6rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+#contact p {
+    color: var(--white);
+    font-size: 1rem;
+    padding: 2rem;
+    text-align: left;
+    line-height: 1.2rem;
+}
+
+#contact form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#contact .form-group {
+    flex: 1 1 calc(50% - 1.5rem);
+    min-width: 250px;
+}
+
+#contact .form-group:nth-child(1),
+#contact .form-group:nth-child(3),
+#contact .form-group:nth-child(5) {
+    /* Left column items */
+    padding-right: 0.75rem;
+}
+
+#contact .form-group:nth-child(2),
+#contact .form-group:nth-child(4),
+#contact .form-group:nth-child(6) {
+    /* Right column items */
+    padding-left: 0.75rem;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--blue);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contact button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    margin-left: auto;
+    display: block;
+    width: auto;
+    height: 56px;
+}
+
+#contact button:hover {
+    background-color: var(--red);
+    transform: scale(1.05);
+    
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: var(--blue);
+}
+
+footer address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
 
 /* IMPORTED FONTS*/
 /* IMPORT "INTER" FROM GOOGLE FONTS"
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -64,6 +459,83 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
+@media (max-width: 768px) {
+    body {
+        min-width: 400px;
+    }
+
+    .container {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        z-index: 100;
+        order: 1;
+        margin-left: auto;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: var(--white);
+    }
+    
+    .nav-links {
+        position: relative;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--black);
+        padding: 1rem;
+        display: none;
+        order: 2;
+    }
+    
+    .nav-links a {
+        transition: all 0.5s ease;
+        text-transform: uppercase;
+        padding: auto;
+        margin-left: 20rem;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+    
+    header {
+        padding: 1.5rem 0;
+    }
+
+    #services .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    #services article {
+        padding: 1.5rem;
+    }
+
+    #results .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+}
+
+}
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
@@ -143,7 +615,13 @@ table {
 
 /* MEDIA QUERIES (MEDIUM) */ 
 
-    #results {
+@media (max-width: 1024px) {
+    #services .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+    #results .results{
         grid-template-columns: 1fr 1fr;
     }
     .results-container {
